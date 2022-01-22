@@ -24,20 +24,24 @@ void hati();
 
 int main()
 {
-	srand(time(NULL));
-	pengaturan();
+		do
+		{
+			srand(time(NULL));
+			pengaturan();
 
-	while(!mati){
-		tampilan();
-		input();
-		logic();
-	}
+			while(!mati){
+				tampilan();
+				input();
+				logic();
+			}
 
-	hati();
+			hati();
 
-	cout << endl ;
+			cout << endl ;
 
-	kalah();		
+			kalah();
+
+		} while (kp != 'n');		
 
 	return 0;
 }
@@ -51,6 +55,7 @@ void pengaturan()
 	buahx = rand() % 19 + 1;
 	buahy = rand() % 19 + 1;
 	score = 0;
+	nekor = 0;
 
 }
 
@@ -136,7 +141,7 @@ void input()
 		else
 		{
 			switch (_getch()){
-				case 'n':
+				case ' ':
 					mati = true;
 					break;
 			}
@@ -211,7 +216,12 @@ void kalah()
 
 	cout << "Total Perolehan Score: " << score << endl;
 
-	cout << "Letak Buah: " << buahx << " & " << buahy << endl;
+	cout << "Letak Buah: " << buahx << " , " << buahy << endl;
+
+	cout << endl;
+
+	cout << "Tekan 'n' untuk keluar | Tekan apa saja untuk bermain lagi " ;
+	cin >> kp;
 }
 
 void hati()
