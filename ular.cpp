@@ -34,7 +34,7 @@ int main()
 				logic();
 			}
 
-			hati();
+			system("cls");
 
 			cout << endl ;
 
