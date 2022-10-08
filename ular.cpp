@@ -20,27 +20,28 @@ void tampilan();
 void input();
 void logic();
 void kalah();
+void hati();
 
 int main()
 {
-		do
-		{
-			srand(time(NULL));
-			pengaturan();
+	do
+	{
+		srand(time(NULL));
+		pengaturan();
 
-			while(!mati){
-				tampilan();
-				input();
-				logic();
-			}
+		while(!mati){
+			tampilan();
+			input();
+			logic();
+		}
 
-			system("cls");
+		hati();
 
-			cout << endl ;
+		cout << endl ;
 
-			kalah();
+		kalah();
 
-		} while (kp != 'n');		
+	} while (kp != 'n');		
 
 	return 0;
 }
@@ -114,7 +115,6 @@ void tampilan()
 		cout << "#" ;
 	}
 }
-
 void input()
 {
 	if (_kbhit())
@@ -221,4 +221,159 @@ void kalah()
 
 	cout << "Tekan 'n' untuk keluar | Tekan apa saja untuk bermain lagi " ;
 	cin >> kp;
+}
+
+void hati()
+{
+	system("cls");
+	for (int i = 0; i < 36; ++i)
+	{
+		cout << " ";
+	}
+	cout << endl;
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 7 && i <= 14) || (i >= 22 && i <= 29))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 5 && i <= 16) || (i >= 20 && i <= 31))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 3 && i <= 17) || (i >= 19 && i <= 33))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 3; ++i)
+	{
+		for (int i = 0; i < 36; ++i)
+		{
+			if (i >= 2 && i <= 34)
+			{
+				cout << "#" ;
+			}
+			else
+			{
+				cout << " " ;
+			}
+		}
+		cout << endl;
+	}
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 3 && i <= 33))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 4 && i <= 32))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 6 && i <= 30))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 9 && i <= 27))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 13 && i <= 23))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ((i >= 16 && i <= 20))
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
+	cout << endl;
+
+	for (int i = 0; i < 36; ++i)
+	{
+		if ( i == 18 )
+		{
+			cout << "#" ;
+		}
+		else
+		{
+			cout << " " ;
+		}
+	}
 }
